@@ -124,7 +124,7 @@ header {
     object-fit: cover;
 }
 .hero-text {
-    margin-top: 20px;
+    margin-top: 10px;
      /* Ensure text is readable on top of the image */
 }
 
@@ -141,7 +141,7 @@ header {
 /* About Section */
 .about-section {
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: center; 
     box-sizing: border-box;
     padding: 20px;
@@ -153,15 +153,18 @@ header {
 
 .about-image {
     float:left;
-    width: 65%;
+    width: 70%;
     height:fit-content;
     cursor: pointer; /* Indicate that the image is clickable */
     margin-right: 20px; /* Space between image and text */
+    border: 5px solid #333; /* Add a border with color and thickness */
+    box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-content{
     flex:content; /* Text content takes up remaining space */
-    display:flex;
+    display: flex;
+    flex-direction: column;
     text-align:start;
     cursor: pointer;
     justify-content:right; /* Center content vertically */
@@ -191,13 +194,15 @@ header {
 
 /* Image Styling */
 .projects-image {
-    width: 71%; /* Image takes up 40% of the section width */
+    width: 70%; /* Image takes up 40% of the section width */
     height: auto;
     cursor: pointer; /* Make it clear the image is clickable */
-    margin-left: 30px; /* Space between text and image */
+    margin-left: 30px;
+    margin-right: 15px; /* Space between text and image */
     object-fit:contain; 
     float: right;
-    padding: 15px;
+    border: 5px solid #333; /* Add a border with color and thickness */
+    box-shadow: -40px 30px 20px rgba(0, 0, 0, 0.3); /* Shadow on left and bottom */
 }
 
 /* Content Styling */
@@ -286,6 +291,7 @@ footer {
     }
 
     .menu {
+        display: none;/*chnge this one*/
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
@@ -325,33 +331,56 @@ footer {
         padding: 10px;
     }
 }
+@media (max-width: 480px) {
+    .search-container input[type="text"] {
+        width: 80%;
+    }
+
+    .search-container button {
+        width: 80%;
+    }
+}
+/* Container for the About Page */
 .about1-page {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  .about1-image {
-    width: 80%;
-    height: 10%;
-    border-radius: 8px;
-  }
-  
-  .about1-content {
-    margin-top: 20px;
-  }
-  
-  .about1-content h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .about1-content p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-  }
+    max-width: 800px; /* Limit the maximum width of the content */
+    margin: 0 auto; /* Center the entire about page content horizontally */
+    text-align: start; /* Align text to the left by default */
+}
+
+/* Centering the Image */
+.about1-image {
+    width: 80%; /* Set the image width */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 8px; /* Apply border-radius to the image */
+    display: block; /* Treat the image as a block element */
+    margin: 10px auto; /* Center the image horizontally and add vertical space */
+}
+
+/* Text Content Styling */
+.about1-content {
+    margin-top: 20px; /* Add some space above the content */
+    padding-left: 0; /* Ensure no padding on the left */
+    margin-left: 0; /* Ensure no margin on the left */
+    text-align: left; /* Align text to the left */
+}
+
+/* Heading Styling */
+.about1-content h2 {
+    font-size: 28px; /* Set the font size for the heading */
+    margin-bottom: 10px; /* Space below the heading */
+    margin-left: 0; /* Ensure the heading starts from the left edge */
+}
+
+/* Paragraph Styling */
+.about1-content p {
+    font-size: 16px; /* Set the font size for paragraphs */
+    line-height: 1.6; /* Set the line height for readability */
+    margin-bottom: 10px; /* Space below paragraphs */
+    margin-left: 0; /* Ensure paragraphs start from the left edge */
+    text-align: left; /* Align text to the left */
+}
+
+
   /*PROJECTS IMAGE IN THAT PROJECT PAGE*/
 
   .project1-page {
@@ -381,4 +410,190 @@ footer {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 10px;
+}
+/*PROJECTS IMAGE IN THAT PROJECT PAGE*/
+
+.project1-page {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left */
+    padding: 10px;
+}
+
+.project1-image {
+    width: 100%; /* Make image full width */
+    height: auto; /* Adjust height automatically */
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space between image and text */
+}
+
+.project1-content {
+    margin-top: 0; /* No extra space at the top */
+}
+
+.project1-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.project1-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+/* Suggested Sites Section */
+.suggested-sites-section {
+    display: flex;
+    align-items: flex-start; /* Align items at the start */
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Suggested Image Styling */
+.suggested-sites-image {
+    width: 96%; /* Adjust width as needed */
+    height: 50%; /* Maintain aspect ratio */
+    cursor: pointer;
+    margin-right: 20px; /* Space between image and text */
+    border: 5px solid #333; /* Border color and thickness */
+    box-shadow: 30px 40px 30px rgba(0, 0, 0, 0.3); /* Shadow on bottom-right */
+}
+
+/* Suggested Content Styling */
+.suggested-sites-content {
+    flex: content; /* Take up remaining space */
+    display: flex;
+    flex-direction: column;
+    text-align: start; /* Align text to the left */
+    cursor: pointer;
+    justify-content: right;
+    padding: 20px;
+}
+
+/* Content Text */
+.suggested-sites-content h2 {
+    margin-top: 70px;/* Adjust font size as needed */
+    text-align: left;
+    margin: 70px;
+}
+
+.suggested-sites-content p {
+    font-size: 20px;
+    margin: 0; /* Ensure no additional margins */
+    text-align: left;
+}
+html {
+    scroll-behavior: smooth;
+}
+.project-item {
+    margin-bottom: 30px; /* Space between project items */
+}
+
+.youtube-downloader {
+    margin-top: 30px; /* Space above the YouTube downloader section */
+    padding: 20px;
+    border: 1px solid #ddd; /* Border around the section */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.youtube-downloader h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.youtube-downloader p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.youtube-downloader form {
+    display: flex;
+    flex-direction: column;
+}
+
+.youtube-downloader label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.youtube-downloader input[type="text"],
+.youtube-downloader select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.youtube-downloader button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.youtube-downloader button:hover {
+    background-color: #0056b3;
+}
+#suggested-sites {
+    margin: 50px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#suggested-sites h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#suggested-sites p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#suggested-sites ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#suggested-sites li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 5px solid #007bff;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+#suggested-sites li:hover {
+    transform: translateX(10px);
+}
+
+#suggested-sites a {
+    font-size: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#suggested-sites a:hover {
+    text-decoration: underline;
+}
+
+#suggested-sites li p {
+    margin-top: 5px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
 }
