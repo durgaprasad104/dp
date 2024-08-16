@@ -8,6 +8,65 @@ body {
     color: #333;
 }
 
+/* Responsive Design for Navigation */
+@media screen and (max-width: 768px) {
+    .menu {
+        display:flex; /* Hide the menu by default on small screens */
+        flex-direction:row;
+        align-items: flex-start;
+        width: 75%;
+        justify-content: space-between;
+    }
+
+    .menu li {
+        width: 15%;
+        margin: 0;
+        margin-left: -30px;
+        
+    }
+
+
+
+
+    @media screen and (max-width: 768px) {
+        .search-container {
+            flex-direction: column; /* Stack input and button vertically */
+            align-items: stretch; /* Make items take full width */
+        }
+    
+        .search-container input[type="text"],
+        .search-container button {
+            width: 70%; /* Ensure full width for both elements */
+            margin: -30px -10px; /* Space between stacked elements */
+        }
+    
+        .search-container button {
+            margin-top: 6px; /* Add space above the button */
+        }
+    }
+
+
+
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon on small screens */
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    /* When the menu-icon is clicked and has the "active" class, display the menu */
+    .menu-icon.active + .menu {
+        display:list-item;
+    }
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Header and Navigation */
 header {
     background: #333;
@@ -161,6 +220,32 @@ header {
     box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.3);
 }
 
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center; /* Center items horizontally */
+        padding: 10px; /* Adjust padding for mobile if needed */
+    }
+
+    .about-image {
+        width: 90%; /* Adjust width to fit within container */
+        margin-right: 0; /* Remove margin for mobile view */
+        margin-top: 40px;
+        margin-bottom: 20px; /* Space below the image */
+        box-shadow: 15px 20px 15px rgba(0, 0, 0, 0.2); /* Adjust shadow for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-image {
+        width: 85%; /* Make image fit well on very small screens */
+        margin-bottom: 10px; /* Further reduce space below the image */
+        box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.2); /* Further adjust shadow */
+    }
+}
+
 .about-content{
     flex:content; /* Text content takes up remaining space */
     display: flex;
@@ -182,6 +267,47 @@ header {
     text-align: left; /* Align text to the left */
     margin: 0; /* Ensure no additional margins */
 }
+
+
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 10px; /* Adjust padding for mobile if needed */
+        text-align: center; /* Center text for mobile view */
+        justify-content: center; /* Center content vertically for mobile */
+    }
+
+    .about-content h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+        margin-top: 10px; /* Adjust margin for mobile */
+        margin-bottom: 10px; /* Reduce space below heading */
+    }
+
+    .about-content p {
+        font-size: 18px; /* Adjust font size for mobile */
+        margin-top: 5px; /* Add a small margin to separate text slightly */
+    }
+}
+
+@media (max-width: 480px) {
+    .about-content {
+        padding: 5px; /* Further adjust padding for very small screens */
+    }
+
+    .about-content h2 {
+        font-size: 22px; /* Smaller font size for very small screens */
+        margin-top: 5px; /* Further adjust margin */
+        margin-bottom: 5px;
+        padding-left: 70px; /* Further reduce space below heading */
+    }
+
+    .about-content p {
+        font-size: 18px; /* Smaller font size for very small screens */
+        margin-top: 3px; /* Further reduce space between text */
+    }
+}
+
 /* Projects Section */
 .projects-section {
     width: 100%;
@@ -227,6 +353,72 @@ header {
     margin: 0; /* Ensure no additional margins */
 }
 
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .projects-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .projects-image {
+        width: 75%; /* Adjust to fit within container */
+        height: auto; /* Maintain aspect ratio */
+        margin: 0 0 20px 0; /* Remove left/right margins and add bottom margin */
+        float: none; /* Remove float to ensure proper stacking */
+        box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3); /* Adjust shadow for mobile */
+    }
+
+    .projects-content {
+        display: flex;
+        flex-direction: column; /* Ensure content is stacked below the image */
+        align-items: center; /* Center the content horizontally */
+        text-align: center; /* Center text */
+        padding: 0 20px; /* Adjust padding as needed */
+    }
+
+    .projects-content h2 {
+        margin-top: 20px; /* Reduce space above the heading on mobile */
+        margin-bottom: 20px; /* Reduce space below the heading on mobile */
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        font-size: 24px; /* Adjust font size for mobile */
+    }
+
+    .projects-content p {
+        margin-top: 10px; /* Add a small margin to separate text slightly */
+        font-size: 20px; /* Adjust font size for mobile */
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-image {
+        width: 80%; /* Make image fit well on very small screens */
+        height: auto;
+        margin-bottom: 70px;
+        padding-left: 0; /* Ensure no extra padding */
+        border: 5px solid #333; /* Add border */
+        box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.3); /* Further adjust shadow for very small screens */
+    }
+
+    .projects-content h2 {
+        margin-top: 50px; /* Further reduce space above the heading */
+        margin-bottom: 10px; /* Further reduce space below the heading */
+        font-size: 22px; 
+        margin-left: -100px;/* Smaller font size for very small screens */
+    }
+
+    .projects-content p {
+        margin-top: 5px; /* Reduce space between heading and paragraph */
+        font-size: 18px; /* Smaller font size for very small screens */
+        margin-left: -15px;
+    }
+}
+
+
 /* Footer and Social Media Tags */
 footer {
     
@@ -268,78 +460,7 @@ footer {
     transform: scale(1.2); /* Slightly increase size on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .social-footer .social-icon {
-        font-size: 20px; /* Smaller size on smaller screens */
-        margin: 0 10px;
-    }
-}
 
-@media (max-width: 480px) {
-    .social-footer .social-icon {
-        font-size: 18px; /* Even smaller size on very small screens */
-        margin: 0 5px;
-    }
-}
-
-/* Responsive Design for Navigation */
-@media screen and (max-width: 768px) {
-    .top-nav {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .menu {
-        display: none;/*chnge this one*/
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-    .menu li {
-        width: 100%;
-        margin: 0;
-    }
-
-    .menu li a {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-    }
-
-    .menu {
-        display: none;
-    }
-
-    .menu-icon.active + .menu {
-        display: flex;
-    }
-
-    .dropdown-content {
-        position: static;
-        min-width: 100%;
-        border-radius: 0;
-    }
-
-    .dropdown-content li a {
-        padding: 10px;
-    }
-}
-@media (max-width: 480px) {
-    .search-container input[type="text"] {
-        width: 80%;
-    }
-
-    .search-container button {
-        width: 80%;
-    }
-}
 /* Container for the About Page */
 .about1-page {
     max-width: 800px; /* Limit the maximum width of the content */
@@ -460,6 +581,29 @@ footer {
     box-shadow: 30px 40px 30px rgba(0, 0, 0, 0.3); /* Shadow on bottom-right */
 }
 
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .suggested-sites-section {
+        flex-direction: column; /* Stack items vertically */
+        align-items:center; /* Center items horizontally */
+    }
+
+    .suggested-sites-image {
+        width: 90%; /* Adjust to fit within container */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Space below the image */
+    }
+}
+
+@media (max-width: 480px) {
+    .suggested-sites-image {
+        width: 85%; /* Make image full width on very small screens */
+        height: auto;
+        box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.3); /* Further adjust shadow */
+    
+    }
+}
+
 /* Suggested Content Styling */
 .suggested-sites-content {
     flex: content; /* Take up remaining space */
@@ -483,6 +627,38 @@ footer {
     margin: 0; /* Ensure no additional margins */
     text-align: left;
 }
+
+/*mobile compact version for suggested content*/
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    .suggested-sites-content h2 {
+        margin-top: 20px; /* Reduce space above the heading on mobile */
+        margin-bottom: 20px; /* Reduce space below the heading on mobile */
+        margin-left: 40px;
+        margin-right: 0;
+        font-size: 24px; /* Adjust font size for mobile if needed */
+    }
+
+    .suggested-sites-content p {
+        margin-top: 10px; /* Add a small margin to separate text slightly */
+        font-size: 20px; /* Adjust font size for mobile if needed */
+        margin-left: -20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .suggested-sites-content h2 {
+        margin-top: -10px; /* Further reduce space above the heading */
+        margin-bottom: 10px; /* Further reduce space below the heading */
+        font-size: 22px; /* Smaller font size for very small screens */
+    }
+
+    .suggested-sites-content p {
+        margin-top: 5px; /* Reduce space between heading and paragraph */
+        font-size: 18px; /* Smaller font size for very small screens */
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
