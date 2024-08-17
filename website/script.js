@@ -1,5 +1,21 @@
 // script.js
 
+// Select the menu icon and menu
+const menuIcon = document.querySelector('.menu-icon');
+const menu = document.querySelector('.menu');
+
+// Add a click event listener to the menu icon
+menuIcon.addEventListener('click', () => {
+    // Toggle the 'active' class on the menu icon
+    menuIcon.classList.toggle('active');
+    
+    // Toggle the visibility of the menu
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
+});
 
 
 function checkPassword() {
@@ -17,6 +33,7 @@ function checkPassword() {
         // Display error message
             errorContainer.textContent = "Incorrect password. Please try again.";
             document.getElementById("passwordInput").value = ''; // Clear the input field
+
     }
 }
 // Hide content initially
@@ -50,3 +67,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+
+function searchSites() {
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    var titles = document.getElementById('siteTitles').getElementsByTagName('li');
+    var found = false;
+
+    for (var i = 0; i < titles.length; i++) {
+        var title = titles[i].innerText.toLowerCase();
+        if (title.includes(input)) {
+            var url = titles[i].getAttribute('data-url');
+            found = true;
+            window.location.href = url; // Redirect to the matched page
+            break;
+        }
+    }
+
+    if (!found) {
+        alert("No matches found."); // Display popup message
+    }
+     // Clear the search input box after searching
+     document.getElementById('searchInput').value = '';
+}
