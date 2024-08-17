@@ -25,13 +25,23 @@
                 </li>
                 <li><a href="suggested.html">Suggested Sites</a></li>
             </ul>
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
             <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search site titles...">
                 <button onclick="searchSites()">Search</button>
             </div>
         </div>
     </header>
+    <!-- Container for search results -->
+    <div id="searchResults"></div>
+
+    <!-- Example list of site titles with associated URLs (hidden) -->
+<ul id="siteTitles" style="display: none;">
+    <li data-url="index.html">Home</li>
+    <li data-url="about.html">about/dp</li>
+    <li data-url="projects.html">My Projects</li>
+    <li data-url="suggested.html">sites/suggested</li>
+    <li data-url="blog.html">Blog</li>
+</ul>
 
     <section id="suggested-sites">
         <h2>Suggested Sites</h2>
