@@ -6,7 +6,20 @@ body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
     color: #333;
+    overflow-x: hidden;
 }
+
+/* Container or Wrapper */
+.container, .content, .wrapper {
+    width: 100%;
+    max-width: 100%; /* Prevent overflow */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
 
 /* Responsive Design for Navigation */
 @media screen and (max-width: 768px) {
@@ -36,7 +49,7 @@ body {
     
         .search-container input[type="text"],
         .search-container button {
-            width: 70%; /* Ensure full width for both elements */
+            width: 60%; /* Ensure full width for both elements */
             margin: -30px -10px; /* Space between stacked elements */
         }
     
@@ -440,7 +453,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensure it stays above other content */
 }
@@ -500,6 +513,46 @@ footer {
     margin-left: 0; /* Ensure paragraphs start from the left edge */
     text-align: left; /* Align text to the left */
 }
+
+
+
+/* Responsive for Mobile View */
+@media screen and (max-width: 768px) {
+    .about1-content {
+        padding-left: 15px; /* Add padding to the left to prevent text cutoff */
+        margin-left: 0; /* Ensure no additional margin is added */
+    }
+
+    .about1-content h2 {
+        font-size: 24px; /* Adjust font size for mobile */
+        margin-bottom: 10px; /* Space below the heading */
+        margin-left: 15px; /* Add a margin to the left for the heading */
+    }
+
+    .about1-content p {
+        font-size: 18px; /* Keep font size consistent */
+        line-height: 1.6; /* Line height for readability */
+        margin-bottom: 10px; /* Space below paragraphs */
+        margin-left: 15px; /* Add a margin to the left for paragraphs */
+        padding-right: 15px; /* Optional: Add padding to the right for balance */
+    }
+}
+
+/* Responsive for Very Small Screens */
+@media screen and (max-width: 480px) {
+    .about1-content h2 {
+        font-size: 22px; /* Smaller font size for very small screens */
+        margin-left: 10px; /* Slightly reduce left margin */
+    }
+
+    .about1-content p {
+        font-size: 16px; /* Adjust font size for smaller screens */
+        margin-left: 10px; /* Slightly reduce left margin */
+        padding-right: 10px; /* Slightly reduce right padding */
+    }
+}
+
+
 
 
   /*PROJECTS IMAGE IN THAT PROJECT PAGE*/
@@ -772,4 +825,47 @@ html {
     font-size: 16px;
     color: #555;
     line-height: 1.5;
+}
+
+
+
+.password-container {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border-radius: 40px;
+    border: 0 solid #ccc;
+    width: 20%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background-color: #ff7e5f;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #feb47b;
+}
+/* Hidden content */
+#projects-content {
+    display: none;
+}
+
+/* Error message styling */
+.error-message {
+    color: rgb(78, 2, 2);
+    margin-top: 10px;
 }
