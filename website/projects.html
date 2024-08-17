@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+
 </head>
 <body>
+
     <header>
         <div class="top-nav">
             <div class="menu-icon">&#9776;</div>
@@ -31,6 +33,18 @@
             </ul>
         </div>
     </header>
+
+
+
+    <div class="password-container">
+        <h2>Enter Password to Access Projects</h2>
+        <input type="password" id="passwordInput" placeholder="Enter your password">
+        <button onclick="checkPassword()">Submit</button>
+        <div id="errorContainer" class="error-message">
+    </div>
+    </div>
+    <div id="projects-content">
+
 
     <div class="project1-page">
         <img src="images/projectimg.jpg" alt="Project Image" class="project1-image">
@@ -65,6 +79,7 @@
         <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://instagram.com/your-profile" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
     </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
