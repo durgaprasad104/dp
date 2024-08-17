@@ -45,12 +45,17 @@ body {
         .search-container {
             flex-direction: column; /* Stack input and button vertically */
             align-items: stretch; /* Make items take full width */
+            width: 40%;
+            margin-left: 40px;
+            margin-right: -30px;
         }
     
         .search-container input[type="text"],
         .search-container button {
-            width: 60%; /* Ensure full width for both elements */
+            width: 40%; /* Ensure full width for both elements */
             margin: -30px -10px; /* Space between stacked elements */
+            margin-right: 100px;
+            margin-left: 10px;
         }
     
         .search-container button {
@@ -866,6 +871,29 @@ button:hover {
 
 /* Error message styling */
 .error-message {
-    color: rgb(78, 2, 2);
+    color: red;
     margin-top: 10px;
+}
+
+
+/* Optional: Style your iframe container */
+.pdf-container {
+    width: 100%;
+    height: 800px; /* Adjust the height as needed */
+     /* Optional: Add border */
+    margin-top: 20px; /* Add some space above the PDF */
+    text-align: center;
+}
+/* Media query for devices with a max-width of 768px (mobile and tablets) */
+@media screen and (max-width: 768px) {
+    .pdf-container {
+        height: 400px; /* Adjust the height for smaller screens */
+    }
+}
+
+/* Media query for even smaller devices with a max-width of 480px (small mobile) */
+@media screen and (max-width: 480px) {
+    .pdf-container {
+        height: 300px; /* Further reduce height for very small screens */
+    }
 }
