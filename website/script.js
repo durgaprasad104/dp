@@ -1,21 +1,5 @@
 // script.js
 
-// Select the menu icon and menu
-const menuIcon = document.querySelector('.menu-icon');
-const menu = document.querySelector('.menu');
-
-// Add a click event listener to the menu icon
-menuIcon.addEventListener('click', () => {
-    // Toggle the 'active' class on the menu icon
-    menuIcon.classList.toggle('active');
-    
-    // Toggle the visibility of the menu
-    if (menu.style.display === 'flex') {
-        menu.style.display = 'none';
-    } else {
-        menu.style.display = 'flex';
-    }
-});
 
 
 function checkPassword() {
