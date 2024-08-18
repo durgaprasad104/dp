@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggested Sites - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <div class="menu-icon">&#9776;</div>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="personal.html">Personal</a></li>
+                <li class="dropdown">
+                    <a href="projects.html" class="dropbtn">My Projects</a>
+                    <ul class="dropdown-content">
+                        <!--<li><a href="project1.html">Project 1</a></li>
+                        <li><a href="project2.html">Project 2</a></li>
+                        <li><a href="project3.html">Project 3</a></li>-->
+                    </ul>
+                </li>
+                <li><a href="suggested.html">Useful Sites</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search...">
+                <button onclick="searchSites()">Search</button>
+            </div>
+        </div>
+    </header>
+    <!-- Container for search results -->
+    <div id="searchResults"></div>
+
+    <!-- Example list of site titles with associated URLs (hidden) -->
+<ul id="siteTitles" style="display: none;">
+    <li data-url="index.html">Home</li>
+    <li data-url="about.html">about/dp</li>
+    <li data-url="projects.html">My Projects</li>
+    <li data-url="suggested.html">sites/suggested</li>
+    <li data-url="personal.html">personal</li>
+</ul>
+
+<div class="password-container">
+    <h2>Enter Password to Access Projects</h2>
+    <input type="password" id="passwordInput" placeholder="Enter your password">
+    <button onclick="checkPassword()">Submit</button>
+    <div id="errorContainer" class="error-message">
+</div>
+</div>
+<div id="projects-content">
+
+     <!-- Personal Section -->
+     <section id="personal-section">
+        <h2>About Me</h2>
+        <p>Hello! I'm <strong>Durga Prasad</strong>, a passionate <strong>Web Developer</strong> with experience in building modern, responsive websites. I have a strong foundation in HTML, CSS, JavaScript, and a keen interest in learning new technologies and frameworks.</p>
+        <p>Whether I'm working on a solo project or collaborating with a team, I always strive to create user-friendly and efficient web solutions that make a difference.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills-section">
+        <h2>Skills</h2>
+        <ul>
+            <li><strong>HTML/CSS:</strong> Proficient in building and styling web pages.</li>
+            <li><strong>JavaScript:</strong> Experienced in creating dynamic and interactive web applications.</li>
+            <!--<li><strong>React:</strong> Knowledgeable in building component-based user interfaces.</li>
+            <li><strong>Version Control (Git):</strong> Proficient in managing code repositories and collaboration using Git.</li>
+            <li><strong>Responsive Design:</strong> Skilled in creating mobile-friendly and responsive layouts.</li>
+            <li><strong>Backend:</strong> Familiar with server-side technologies like Node.js and databases like MongoDB.</li>-->
+        </ul>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience-section">
+        <h2>Experience</h2>
+        <h3>Machine learning Intern - Indian servers</h3>
+        <p><em>June 2023 - August 2023</em></p>
+        <p>During my internship at Indian servers, I contributed to the development of chatbots by:</p>
+        <ul>
+            <li>Designing and implementing responsive layouts using HTML, CSS, and Bootstrap.</li>
+            <li>Assisting in the development of front-end features using JavaScript and React.</li>
+            <li>Collaborating with the backend team to integrate APIs and improve user experience.</li>
+            <li>Participating in code reviews and providing feedback to peers.</li>
+        </ul>
+
+        <h3>AI intern</h3>
+        <p><em>May 2024 - July 2024</em></p>
+        <p> I have worked with various clients to deliver custom web solutions, including:</p>
+        <ul>
+            <li>Building e-commerce websites with integrated payment gateways.</li>
+            <li>Developing personal blogs and portfolio websites for individuals and small businesses.</li>
+            <li>Providing ongoing support and maintenance for client websites.</li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out to me via the following platforms:</p>
+        <ul>
+            <li><strong>Email:</strong> nameisdp104@gmail.com</li>
+            <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/your-profile" target="_blank">linkedin.com/in/your-profile</a></li>
+            <li><strong>GitHub:</strong> <a href="https://github.com/your-profile" target="_blank">github.com/your-profile</a></li>
+            <li><strong>Twitter:</strong> <a href="https://twitter.com/your-profile" target="_blank">twitter.com/your-profile</a></li>
+        </ul>
+    </section>
+
+    <footer class="social-footer">
+        <a href="https://facebook.com/your-profile" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/your-profile" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/your-profile" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+    </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
