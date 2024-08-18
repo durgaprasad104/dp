@@ -237,8 +237,26 @@ header {
     margin-right: 20px; /* Space between image and text */
     border: 5px solid #333; /* Add a border with color and thickness */
     box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.3);
+
+    /* Initial position for the animation */
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 5s ease-out forwards;
+
+
 }
 
+/* Keyframes for sliding in */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 /* Mobile-specific styles */
 @media (max-width: 768px) {
@@ -302,6 +320,7 @@ header {
         font-size: 24px; /* Adjust font size for mobile */
         margin-top: 10px; /* Adjust margin for mobile */
         margin-bottom: 10px; /* Reduce space below heading */
+        padding-left: 24px;
     }
 
     .about-content p {
@@ -349,7 +368,29 @@ header {
     float: right;
     border: 5px solid #333; /* Add a border with color and thickness */
     box-shadow: -40px 30px 20px rgba(0, 0, 0, 0.3); /* Shadow on left and bottom */
+     /* Initial position for the animation */
+    /* Initial position for the animation */
+    /* Initial position for the animation */
+    transform: translateX(10%);
+    opacity: 0;
+    animation: slideIn 5s ease-out forwards;
+
+
 }
+
+
+/* Keyframes for the sliding animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
 /* Content Styling */
 .projects-content {
@@ -640,6 +681,26 @@ footer {
     margin-right: 20px; /* Space between image and text */
     border: 5px solid #333; /* Border color and thickness */
     box-shadow: 30px 40px 30px rgba(0, 0, 0, 0.3); /* Shadow on bottom-right */
+     /* Initial position for the animation */
+     /* Initial position for the animation */
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 5s ease-out forwards;
+
+
+}
+
+
+/* Keyframes for the sliding animation */
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 /* Mobile-specific styles */
@@ -900,3 +961,214 @@ button:hover {
         height: 300px; /* Further reduce height for very small screens */
     }
 }
+
+
+/* Personal Section */
+#personal-section {
+    
+    
+    
+    padding: 40px 30px;
+}
+
+#personal-section p {
+    font-size: 18px;
+    
+}
+
+/* Skills Section */
+#skills-section {
+    
+   
+    padding: 40px 30px;
+}
+
+#skills-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Experience Section */
+#experience-section {
+    
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+}
+
+#experience-section h3 {
+    font-size: 24px;
+    color: #002d4a;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+#experience-section p {
+    font-size: 16px;
+    color: #777;
+}
+
+#experience-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Contact Section */
+#contact-section {
+   
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+}
+
+#contact-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#contact-section ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#contact-section ul li a {
+    color: #001727;
+    text-decoration: none;
+}
+
+#contact-section ul li a:hover {
+    color: #001f34;
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    section {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    #experience-section h3 {
+        font-size: 22px;
+    }
+
+    p, ul li {
+        font-size: 16px;
+    }
+}
+
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+#upload-section,
+#controls-section,
+#result-section {
+    
+    background-color: #feb47b;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="number"],
+input[type="file"] {
+    padding: 8px;
+    font-size: 16px;
+    width: calc(100% - 18px);
+    
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#compressButton,
+#resizeButton {
+    background-color: #007BFF;
+    color: rgb(20, 11, 11);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+#compressButton:hover,
+#resizeButton:hover {
+    background-color: #00152c;
+}
+
+#resultImage {
+    max-width: 60%;
+    height: 80%;
+    display: block;
+    margin: 10px 0;
+}
+
+#downloadLink {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#downloadLink:hover {
+    background-color: #218838;
+}
+
+/* project-2*/
