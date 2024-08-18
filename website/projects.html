@@ -1,116 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+// script.js
 
+// Select the menu icon and menu
+const menuIcon = document.querySelector('.menu-icon');
+const menu = document.querySelector('.menu');
 
-</head>
-<body>
-
-    <header>
-        <div class="top-nav">
-            <div class="menu-icon">&#9776;</div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="personal.html">Personal</a></li>
-                <li class="dropdown">
-                    <a href="projects.html" class="dropbtn">My Projects</a>
-                    <ul class="dropdown-content">
-                        <!--<li><a href="#project1">Project 1</a></li>
-                        <li><a href="#project2">Project 2</a></li>
-                        <li><a href="#project3">Project 3</a></li>-->
-                    </ul>
-                </li>
-                <li><a href="suggested.html">Useful Sites</a></li>
-            </ul>
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search...">
-                <button onclick="searchSites()">Search</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Container for search results -->
-    <div id="searchResults"></div>
-
-    <!-- Example list of site titles with associated URLs (hidden) -->
-<ul id="siteTitles" style="display: none;">
-    <li data-url="index.html">Home</li>
-    <li data-url="about.html">about/dp</li>
-    <li data-url="projects.html">My Projects</li>
-    <li data-url="suggested.html">sites/suggested</li>
-    <li data-url="personal.html">personal</li>
-</ul>
-
-
-
-    <div class="project1-page">
-        <img src="images/projectimg.jpg" alt="Project Image" class="project1-image">
-        <div class="project1-content">
-            <h2>Projects</h2>
-            <p>Explore some of the work I’ve done over the years. My projects span various domains, and each project reflects my commitment to quality and innovation.</p>
-            <p>Feel free to click on each project to learn more about the challenges I faced and the solutions I implemented.</p>
-            
-            <!-- Project 1 -->
-            <div id="project1" class="project-item">
-                <h3>Project-1
-                    Overview
-                </h3>
-                <p> The Image Resizer and Quality Adjuster is a web-based tool designed to help users modify the quality and file size of their images according to their specific needs. Users can upload an image, specify a target file size, and the tool will adjust the image quality to meet that target. This tool is useful for managing image file sizes for web optimization, email attachments, or storage limitations.</p>
-            </div>
-          <!-- Upload Section -->
-        <section id="upload-section">
-            <h2>Upload an Image</h2>
-            <input type="file" id="fileInput" accept="image/*">
-        </section>
-
-        <!-- Controls Section -->
-        <section id="controls-section">
-            <h2>Image Controls</h2>
-            <label for="qualitySizeInput">Target Size:</label>
-            <input type="number" id="qualitySizeInput" placeholder="Enter size in KB" min="1">
-            <select id="qualitySizeUnit">
-                <option value="KB">KB</option>
-                <option value="MB">MB</option>
-            </select>
-            <button id="adjustQualityButton">Adjust Image Quality</button>
-        </section>
-
-        <!-- Result Section -->
-        <section id="result-section">
-            <h2>Result</h2>
-            <img id="resultImage" alt="Processed Image">
-            <a id="downloadLink" href="#" download="processed_image.jpg">Download Image</a>
-        </section>
-            <!-- Project 2 -->
-            <div id="project2" class="project-item">
-                <h3>Project-2</h3>
-                <p>Description or content about Project-2. Explain what the project is about, the challenges you faced, and the solutions you implemented.</p>
-            </div>
-           
-            <!-- Project 3 -->
-            <div id="project3" class="project-item">
-                <h3>Project-3</h3>
-                <p>Description or content about Project-3. Explain what the project is about, the challenges you faced, and the solutions you implemented.</p>
-            </div>
-        </div>
-    </div>
+// Add a click event listener to the menu icon
+menuIcon.addEventListener('click', () => {
+    // Toggle the 'active' class on the menu icon
+    menuIcon.classList.toggle('active');
     
-    
-    <footer class="social-footer">
-        <a href="https://facebook.com/your-profile" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://twitter.com/your-profile" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="https://linkedin.com/in/your-profile" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://instagram.com/your-profile" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
-    </footer>
+    // Toggle the visibility of the menu
+    if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+    } else {
+        menu.style.display = 'flex';
+    }
+});
 
-    
-    <script src="script.js"></script>
-</body>
-</html>
+
+function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    var errorContainer = document.getElementById("errorContainer");
+
+    // Clear previous error message
+    errorContainer.textContent = '';
+
+
+    if (password === "12345") {
+        document.querySelector(".password-container").style.display = "none";
+        document.getElementById("projects-content").style.display = "block"; // Show the content
+    } else {
+        // Display error message
+            errorContainer.textContent = "Incorrect password. Please try again.";
+            document.getElementById("passwordInput").value = ''; // Clear the input field
+
+    }
+}
+// Hide content initially
+window.onload = function() {
+    document.getElementById("projects-content").style.display = "none";
+};
+
+function searchFunction() {
+    // Add search functionality here
+
+
+    var query = document.getElementById("search-bar").value;
+    alert("Search functionality is not implemented. You searched for: " + query);
+}
+// Smooth Scrolling Function
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.dropdown-content a');
+
+    for (const link of links) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            // Scroll to the target element smoothly
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+
+
+function searchSites() {
+    var input = document.getElementById('searchInput').value.toLowerCase();
+    var titles = document.getElementById('siteTitles').getElementsByTagName('li');
+    var found = false;
+
+    for (var i = 0; i < titles.length; i++) {
+        var title = titles[i].innerText.toLowerCase();
+        if (title.includes(input)) {
+            var url = titles[i].getAttribute('data-url');
+            found = true;
+            window.location.href = url; // Redirect to the matched page
+            break;
+        }
+    }
+
+    if (!found) {
+        alert("No matches found."); // Display popup message
+    }
+     // Clear the search input box after searching
+     document.getElementById('searchInput').value = '';
+}
+
+
+// Function to check if the element is in the viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+
+document.getElementById('adjustQualityButton').addEventListener('click', function() {
+    const fileInput = document.getElementById('fileInput');
+    const sizeInput = parseFloat(document.getElementById('qualitySizeInput').value);
+    const sizeUnit = document.getElementById('qualitySizeUnit').value;
+
+    if (fileInput.files.length === 0 || isNaN(sizeInput) || sizeInput <= 0) {
+        alert('Please upload a file and enter a valid size.');
+        return;
+    }
+
+    const file = fileInput.files[0];
+    const reader = new FileReader();
+    const targetSize = sizeUnit === 'MB' ? sizeInput * 1024 : sizeInput; // Convert MB to KB
+
+    reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+
+            let quality = 1.0;
+            const maxQuality = 0.1; // Minimum quality to avoid excessively poor image quality
+
+            function adjustQuality() {
+                canvas.toBlob(function(blob) {
+                    if (blob.size / 1024 > targetSize && quality > maxQuality) {
+                        quality -= 0.05; // Reduce quality
+                        adjustQuality(); // Recompress
+                    } else {
+                        const url = URL.createObjectURL(blob);
+                        document.getElementById('resultImage').src = url;
+                        document.getElementById('downloadLink').href = url;
+                    }
+                }, 'image/jpeg', quality);
+            }
+
+            ctx.drawImage(img, 0, 0);
+            adjustQuality();
+        };
+
+        img.src = event.target.result;
+    };
+
+    reader.readAsDataURL(file);
+});
+/* project2*/
