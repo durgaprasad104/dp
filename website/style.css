@@ -21,63 +21,6 @@ body {
 
 
 
-/* Responsive Design for Navigation */
-@media screen and (max-width: 768px) {
-    .menu {
-        display:flex; /* Hide the menu by default on small screens */
-        flex-direction:row;
-        align-items: flex-start;
-        width: 75%;
-        justify-content: space-between;
-    }
-
-    .menu li {
-        width: 15%;
-        margin: 0;
-        margin-left: -30px;
-        
-    }
-
-
-
-
-    @media screen and (max-width: 768px) {
-        .search-container {
-            flex-direction: column; /* Stack input and button vertically */
-            align-items: center; /* Make items take full width */
-            width: 100%;
-            margin-left: 0;
-            padding-right: 0;
-            margin-right: 0;
-        }
-    
-        .search-container input[type="text"],
-        .search-container button {
-            width: 60%; /* Ensure full width for both elements */
-            margin:0 0; /* Space between stacked elements */
-            margin-right: 0;
-            margin-left: 35px;
-        }
-    
-        .search-container button {
-            margin-top: 0; /* Add space above the button */
-        }
-    }
-
-
-
-
-    .menu-icon {
-        display: block; /* Show the hamburger icon on small screens */
-        cursor: pointer;
-        font-size: 24px;
-    }
-
-    /* When the menu-icon is clicked and has the "active" class, display the menu */
-    .menu-icon.active + .menu {
-        display:list-item;
-    }
-}
 
 
 img {
@@ -86,34 +29,31 @@ img {
 }
 
 
+
+
 /* Header and Navigation */
 header {
     background: #333;
-    padding: 10px 0;
+    padding: 6px 0;
 }
 
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
-}
-
-.top-nav .menu-icon {
-    display: none; /* Hidden for now, unless used for mobile view */
-}
-
-.top-nav .search-container {
-    flex: 1;
+    width: 100%;
 }
 
 .search-container input[type="text"] {
-    width: 60%;
     padding: 8px;
-    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
     border-radius: 5px;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    margin-right: 0;
+    margin-left: 0;
+
 }
 
 .search-container button {
@@ -123,11 +63,7 @@ header {
     background-color: #ff7e5f;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.search-container button:hover {
-    background-color: #feb47b;
+    margin-right: 50px;
 }
 
 .menu {
@@ -157,10 +93,62 @@ header {
     color: #fff;
 }
 
-/* Dropdown Menu */
-.menu li.dropdown:hover .dropdown-content {
-    display: block;
+/* Mobile View - Show Hamburger Icon and Hide Menu by Default */
+@media screen and (max-width: 768px) {
+    .menu {
+        display: none; /* Hide the menu by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: #323839; /* Background color for the dropdown menu */
+        position: absolute;
+        top: 50px; /* Adjust this based on your header height */
+        left: 0;
+        z-index: 1;
+        overflow: hidden;
+        max-height: 0; /* Start with height 0 to enable the slide effect */
+        transition: max-height 0.5s ease-in-out; /* Slide down effect */
+        
+    }
+
+    .menu li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon on mobile */
+        cursor: pointer;
+        font-size: 30px;
+        color: white;
+        margin-left: 20px;
+    }
+
+    /* Display the menu when the hamburger icon is clicked */
+    .menu.active {
+        display: flex; /* Show the menu */
+        max-height: 300px; /* Set a height that fits your menu content */
+        transition: max-height 0.5s ease-in-out; /* Slide down effect */
+    }
 }
+
+/* Optional: You can also add fade-in effect for individual menu items */
+.menu.active li {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.3s;
+}
+
+/* Keyframe animation for fading in the menu items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 .dropdown-content {
     display: none;
@@ -188,6 +176,8 @@ header {
 .dropdown-content li a:hover {
     background-color: #2c8d77;
 }
+
+
 /* Hero Section */
 .hero {
     text-align: center;
