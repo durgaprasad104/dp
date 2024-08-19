@@ -11,26 +11,24 @@
 <body>
     <header>
         <div class="top-nav">
-            <div class="menu-icon">&#9776;</div>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="personal.html">Personal</a></li>
-                <li class="dropdown">
-                    <a href="projects.html" class="dropbtn">My Projects</a>
-                    <ul class="dropdown-content">
-                        <!--<li><a href="project1.html">Project 1</a></li>
-                        <li><a href="project2.html">Project 2</a></li>
-                        <li><a href="project3.html">Project 3</a></li>-->
-                    </ul>
-                </li>
-                <li><a href="suggested.html">Useful Sites</a></li>
-            </ul>
-            <div class="search-container">
+            <!-- Hamburger Menu Icon -->
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+             <!-- Your Menu -->
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="personal.html">Personal</a></li>
+            <li><a href="projects.html">My Projects</a></li>
+            <li><a href="suggested.html">Useful Sites</a></li>
+        </ul>
+
+
+        <div class="search-container">
                 <input type="text" id="searchInput" placeholder="Search...">
                 <button onclick="searchSites()">Search</button>
             </div>
-        </div>
+
+    </div>
     </header>
     <!-- Container for search results -->
     <div id="searchResults"></div>
