@@ -34,13 +34,14 @@ img {
 /* Header and Navigation */
 header {
     background: #262626;
-    padding: 6px 0;
+    padding: 1px 0;
 
     position: fixed; /* Make the header fixed */
     top: 0; /* Position it at the top of the page */
     width: 100%; /* Ensure it spans the full width */
+    height: 42px;
     z-index: 1000; /* Ensure it stays above other elements */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow for depth */
+    
 }
 
 .top-nav {
@@ -667,6 +668,7 @@ body:focus .about1-content {
     height: auto; /* Adjust height automatically */
     border-radius: 8px;
     margin-bottom: 20px; /* Space between image and text */
+    margin-top: 35px;
 }
 
 .project1-content {
