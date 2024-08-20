@@ -206,6 +206,7 @@ header {
     height: 100x;
     max-height: 250px; /* Adjust based on your design */
     object-fit: cover;
+    margin-top: 10px;
 }
 .hero-text {
     margin-top: 10px;
