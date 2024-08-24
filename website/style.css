@@ -79,7 +79,6 @@ header {
     align-items: center;
     margin: 0;
     padding: 0;
-    
    
    
     
@@ -138,6 +137,7 @@ header {
         font-size: 30px;
         color: white;
         margin-left: 20px;
+        transition: transform 0.3s ease;
     }
 
     /* Display the menu when the hamburger icon is clicked */
@@ -206,7 +206,7 @@ header {
     height: 100x;
     max-height: 250px; /* Adjust based on your design */
     object-fit: cover;
-    margin-top: 25px;
+    margin-top: 26px;
 }
 .hero-text {
     margin-top: 10px;
@@ -509,7 +509,7 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000; /* Ensure it stays above other content */
 }
@@ -1262,4 +1262,3 @@ input[type="file"] {
     background-color: #218838;
 }
 
-/* project-2*/
