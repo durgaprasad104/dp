@@ -5,6 +5,23 @@ function toggleMenu() {
     menu.classList.toggle("active");
 }
 
+// mobile menu hamburger
+
+document.getElementById("menu-icon").addEventListener("click", function() {
+    var menu = document.getElementById("menu");
+    var icon = document.getElementById("menu-icon");
+
+    // Toggle the menu's active class
+    menu.classList.toggle("active");
+
+    // Toggle the icon's active class
+    if (menu.classList.contains("active")) {
+        icon.innerHTML = "&times;"; // Change to 'X'
+    } else {
+        icon.innerHTML = "&#9776;"; // Change back to hamburger
+    }
+});
+
 
 function checkPassword() {
     var password = document.getElementById("passwordInput").value;
@@ -140,3 +157,4 @@ document.getElementById('adjustQualityButton').addEventListener('click', functio
     reader.readAsDataURL(file);
 });
 /* project2*/
+
