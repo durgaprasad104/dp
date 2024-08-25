@@ -1262,3 +1262,80 @@ input[type="file"] {
     background-color: #218838;
 }
 
+/* index contact page*/
+.profile-section {
+    display: flex;
+    align-items: center;
+    margin-top: 40px; /* Adjust the margin as needed */
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Adjust the size as needed */
+    margin-right: 50px; /* Space between image and text */
+    margin-left: 10px;
+}
+
+.profile-info {
+    max-width: 1000px; /* Adjust width as needed */
+    text-align: center;
+}
+
+.profile-info h3 {
+    font-size: 24px;
+    margin: 0;
+    
+    
+}
+
+.profile-info .title {
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 10px;
+    
+}
+
+.profile-info .bio {
+    font-size: 16px;
+    line-height: 1.6;
+    
+    
+    
+}
+/* Media query for small screens */
+@media (max-width: 600px) {
+    .profile-section {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .profile-picture {
+        width: 200px; /* Smaller image size for mobile */
+        height: 200px; /* Smaller image size for mobile */
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 15px; /* Space below the image */
+    }
+
+    .profile-info h3 {
+        font-size: 20px; /* Smaller font for mobile */
+    }
+
+    .profile-info .title {
+        font-size: 16px; /* Smaller font for mobile */
+    }
+
+    .profile-info .bio {
+        font-size: 14px; /* Smaller font for mobile */
+    }
+}
+
+.name-link {
+    color: inherit; /* Inherit the text color from the parent element */
+    text-decoration: none; /* Remove the underline */
+}
+
+.name-link:hover {
+    text-decoration: underline; /* Optionally, add underline on hover */
+    color: #000; /* Optional: Change the color on hover (e.g., to black) */
+}
