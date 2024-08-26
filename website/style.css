@@ -116,7 +116,7 @@ header {
         width: 100%;
         background-color: #323839; /* Background color for the dropdown menu */
         position: absolute;
-        top: 50px; /* Adjust this based on your header height */
+        top: 43px; /* Adjust this based on your header height */
         left: 0;
         z-index: 1;
         overflow: hidden;
