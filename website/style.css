@@ -114,21 +114,21 @@ header {
         display: none; /* Hide the menu by default */
         flex-direction: column;
         width: 100%;
-        background-color: #323839; /* Background color for the dropdown menu */
+        background-color: #393f3f; /* Background color for the dropdown menu */
         position: absolute;
         top: 43px; /* Adjust this based on your header height */
         left: 0;
         z-index: 1;
         overflow: hidden;
-        max-height: 0; /* Start with height 0 to enable the slide effect */
+        max-height: 40; /* Start with height 0 to enable the slide effect */
         transition: max-height 0.5s ease-in-out; /* Slide down effect */
         
     }
 
     .menu li {
         width: 100%;
-        text-align: center;
-        border-bottom: 1px solid #444;
+        text-align:center;
+        border-bottom: 1px solid #e0d8d8;
     }
 
     .menu-icon {
@@ -238,10 +238,10 @@ header {
 
 .about-image {
     float:left;
-    width: 70%;
+    width: 50%;
     height:fit-content;
     cursor: pointer; /* Indicate that the image is clickable */
-    margin-right: 20px; /* Space between image and text */
+    margin-right: -20px; /* Space between image and text */
     border: 5px solid #333; /* Add a border with color and thickness */
     box-shadow: 40px 30px 20px rgba(0, 0, 0, 0.3);
 
@@ -274,7 +274,7 @@ header {
     }
 
     .about-image {
-        width: 90%; /* Adjust width to fit within container */
+        width: 60%; /* Adjust width to fit within container */
         margin-right: 0; /* Remove margin for mobile view */
         margin-top: 40px;
         margin-bottom: 20px; /* Space below the image */
@@ -366,7 +366,7 @@ header {
 
 /* Image Styling */
 .projects-image {
-    width: 70%; /* Image takes up 40% of the section width */
+    width: 60%; /* Image takes up 40% of the section width */
     height: auto;
     cursor: pointer; /* Make it clear the image is clickable */
     margin-left: 30px;
@@ -430,7 +430,7 @@ header {
     }
 
     .projects-image {
-        width: 86%; /* Adjust to fit within container */
+        width: 60%; /* Adjust to fit within container */
         height: auto; /* Maintain aspect ratio */
         margin: 0 0 20px 0; /* Remove left/right margins and add bottom margin */
         float: none; /* Remove float to ensure proper stacking */
@@ -727,7 +727,7 @@ body:focus .about1-content {
 
 /* Suggested Image Styling */
 .suggested-sites-image {
-    width: 96%; /* Adjust width as needed */
+    width: 70%; /* Adjust width as needed */
     height: 50%; /* Maintain aspect ratio */
     cursor: pointer;
     margin-right: 20px; /* Space between image and text */
@@ -763,7 +763,7 @@ body:focus .about1-content {
     }
 
     .suggested-sites-image {
-        width: 90%; /* Adjust to fit within container */
+        width: 60%; /* Adjust to fit within container */
         height: auto; /* Maintain aspect ratio */
         margin-bottom: 20px; /* Space below the image */
     }
