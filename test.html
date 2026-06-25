@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Payment Status</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">Monthly Payment Status</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Transaction ID</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody id="membersTable">
+        <!-- Rows will be generated here by JavaScript -->
+    </tbody>
+</table>
+
+<script>
+    // Default list of 6 members
+    const members = [
+        { name: 'Member 1', transactionId: '', status: 'No' },
+        { name: 'Member 2', transactionId: '', status: 'No' },
+        { name: 'Member 3', transactionId: '', status: 'No' },
+        { name: 'Member 4', transactionId: '', status: 'No' },
+        { name: 'Member 5', transactionId: '', status: 'No' },
+        { name: 'Member 6', transactionId: '', status: 'No' }
+    ];
+
+    // Function to display members in the table
+    function displayMembers() {
+        const tableBody = document.getElementById('membersTable');
+        tableBody.innerHTML = ''; // Clear the table before updating
+
+        members.forEach((member, index) => {
+            const row = document.createElement('tr');
+
+            // Name cell
+            const nameCell = document.createElement('td');
+            nameCell.textContent = member.name;
+            row.appendChild(nameCell);
+
+            // Transaction ID input cell
+            const transactionCell = document.createElement('td');
+            const transactionInput = document.createElement('input');
+            transactionInput.type = 'text';
+            transactionInput.value = member.transactionId;
+            transactionInput.placeholder = 'Enter Transaction ID';
+            transactionInput.oninput = function () {
+                updateTransaction(index, transactionInput.value);
+            };
+            transactionCell.appendChild(transactionInput);
+            row.appendChild(transactionCell);
+
+            // Status cell
+            const statusCell = document.createElement('td');
+            statusCell.textContent = member.status;
+            row.appendChild(statusCell);
+
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Function to update the transaction and status
+    function updateTransaction(index, transactionId) {
+        members[index].transactionId = transactionId;
+        members[index].status = transactionId ? 'Yes' : 'No';
+        displayMembers(); // Re-render the table to update the status
+    }
+
+    // Display members initially
+    displayMembers();
+</script>
+
+</body>
+</html>
