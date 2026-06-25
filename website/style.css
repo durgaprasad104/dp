@@ -1424,6 +1424,10 @@ footer.social-footer {
     display: block;
   }
   
+  .top-nav {
+    position: absolute;
+  }
+  
   .menu {
     position: fixed;
     top: 75px;
@@ -1452,6 +1456,10 @@ footer.social-footer {
     display: none; /* Hide top search bar on smaller devices */
   }
   
+  main {
+    padding: 1.25rem;
+  }
+  
   .hero-title {
     font-size: 2.75rem;
   }
@@ -1459,10 +1467,89 @@ footer.social-footer {
   .quick-profile {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  
+  .quick-avatar {
+    width: 100px;
+    height: 100px;
   }
   
   .timeline {
     padding-left: 2rem;
+  }
+  
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: -8px;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    scrollbar-width: none;
+  }
+  
+  .filter-container::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .filter-btn {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .lock-container {
+    padding: 2rem 1.5rem;
+    margin: 3rem 0;
+    width: 100%;
+  }
+
+  .toast-container {
+    right: 16px;
+    left: 16px;
+    bottom: 16px;
+    width: auto;
+  }
+  
+  .toast-notification {
+    min-width: 0;
+    width: 100%;
+    max-width: none;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .hero-buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .stat-val {
+    font-size: 1.5rem;
   }
 }
 
